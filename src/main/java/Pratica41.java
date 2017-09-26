@@ -14,26 +14,19 @@ import utfpr.ct.dainf.if62c.pratica.Elipse;
  */
 public class Pratica41 {
     public static void main(String args[]){
-        Elipse eli = new Elipse();
+        Elipse eli = new Elipse(2.5 , 3);
         
-        eli.setEixoX(6.0);
-        eli.setEixoY(5.0);
-        
-        System.out.println("Semi eixo X da Elipse: " + eli.getEixoX());
-        System.out.println("Semi eixo Y da Elipse: " + eli.getEixoY());
-        System.out.println("Area da Elipse: " + eli.getArea(eli.getEixoX(), eli.getEixoY()));
-        System.out.println("Perimetro da Elipse: " + eli.getPerimetro(eli.getEixoX(), eli.getEixoY()));
+        System.out.println("Area da Elipse: " + eli.getArea());
+        System.out.println("Perimetro da Elipse: " + eli.getPerimetro());
         System.out.println();
         
         
         
-        Circulo circ = new Circulo();
+        Circulo circ = new Circulo(3);
         
-        circ.setRaio(3.0);
         
-        System.out.println("Raio do Circulo: " + circ.getRaio());
-        System.out.println("Area do Circulo: " + eli.getArea(circ.getRaio(), circ.getRaio()));
-        System.out.println("Perimetro do Circulo: " + circ.getPerimetro(circ.getRaio()));
+        System.out.println("Area do Circulo: " + eli.getArea());
+        System.out.println("Perimetro do Circulo: " + circ.getPerimetro());
         System.out.println();
     }
 }

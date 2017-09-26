@@ -11,49 +11,28 @@ package utfpr.ct.dainf.if62c.pratica;
  */
 public class Elipse {
     
-    private double eixoX;
-    private double eixoY;
+    protected double eixoX;
+    protected double eixoY;
     
-    /**
-     * @return the eixoX
-     */
-    public double getEixoX() {
-        return eixoX/2;
-    }
-
-    /**
-     * @param eixoX the eixoX to set
-     */
-    public void setEixoX(double eixoX) {
-        this.eixoX = eixoX;
-    }
-
-    /**
-     * @return the eixoY
-     */
-    public double getEixoY() {
-        return eixoY/2;
-    }
-
-    /**
-     * @param eixoY the eixoY to set
-     */
-    public void setEixoY(double eixoY) {
-        this.eixoY = eixoY;
+    public Elipse(){}
+    
+    public Elipse(double eiX, double eiY){
+        this.eixoX = eiX;
+        this.eixoY = eiY;
     }
     
-    public double getArea(double semiX, double semiY){
+    public double getArea(){
         double resultado;
         
-        resultado = Math.PI * semiX * semiY;
+        resultado = Math.PI * this.eixoX * this.eixoY;
         
         return resultado;
     }
     
-    public double getPerimetro(double semiX, double semiY){
+    public double getPerimetro(){
         double resultado;
         
-        resultado = Math.PI *(  3*(semiX + semiY)  -  Math.sqrt( (3*semiX + semiY)  *  (semiX + 3*semiY) ) );
+        resultado = Math.PI *(  3*(this.eixoX + this.eixoY)  -  Math.sqrt((3*this.eixoX + this.eixoY)  *  (this.eixoX + 3* this.eixoY) ) );
         
         return resultado;
     }

@@ -11,30 +11,21 @@ package utfpr.ct.dainf.if62c.pratica;
  */
 public class Circulo extends Elipse {
     
-    private double raio;
+    public Circulo(){}
     
-    /**
-     * @return the raio
-     */
-    public double getRaio() {
-        return raio;
+    public Circulo(double raio){
+        this.eixoX=raio;
+        this.eixoY=raio;
     }
 
+    
     /**
-     * @param raio the raio to set
+     * @Override
      */
-    public void setRaio(double raio) {
-        this.raio = raio;
-    }
-    /**
-    * @Override
-    */
-    
-    
-    public double getPerimetro(double raio){
+    public double getPerimetro(){
         double resultado;
         
-        resultado = 2 * Math.PI * raio;
+        resultado = 2 * Math.PI * this.eixoX;
         
         return resultado;
     }
